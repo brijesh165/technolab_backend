@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "f3e482fc-e2d9-4a34-84a0-508922099694",
+		"name": "technolab-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Questions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwiaWF0IjoxNjI3ODE3Njk1fQ.QMA5tEpnu0WI-kdoBtL4UnSjZhUIpbSh4ZNTi5QlUuw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/listquestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listquestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwiaWF0IjoxNjI3ODE3Njk1fQ.QMA5tEpnu0WI-kdoBtL4UnSjZhUIpbSh4ZNTi5QlUuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question_title\": \"Which of the following can be considered as the maximum size that is supported by NTFS?\",\n    \"options\": [\"4GB\", \"16TB\", \"64TB\", \"8TB\"],\n    \"correct_answer\": \"4GB\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addquestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addquestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwiaWF0IjoxNjI3ODE3Njk1fQ.QMA5tEpnu0WI-kdoBtL4UnSjZhUIpbSh4ZNTi5QlUuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question_id\": \"6106928cc3f247088cd9fb42\",\n    \"question_title\": \"Which of the following can be considered as the maximum size that is supported by NTFS?\",\n    \"options\": [\"4GB\", \"16TB\", \"64TB\", \"8TB\"],\n    \"correct_answer\": \"a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/editquestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"editquestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwiaWF0IjoxNjI3ODE3Njk1fQ.QMA5tEpnu0WI-kdoBtL4UnSjZhUIpbSh4ZNTi5QlUuw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question_id\": \"6106928cc3f247088cd9fb42\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/deletequestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deletequestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Result",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDY4MGVjZTI4ZGFmMDVhMTQ3YTBjMyIsImlhdCI6MTYyNzgyNDkyNH0.-om0cRJ8Wi4IUQtRLbhZmKRc55TljsdhI6Thnslkm-4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_answers\": [\n        {\"question_id\": \"61068d70ba5d1307aa376ab7\", \"user_answer\": \"A\"},\n        {\"question_id\": \"61068d70ba5d1307aa376ab9\", \"user_answer\": \"B\"},\n        {\"question_id\": \"61068d70ba5d1307aa376ab8\", \"user_answer\": \"B\"},\n        {\"question_id\": \"6106922e95f5c10886684008\", \"user_answer\": \"A\"}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/saveresult",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"saveresult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDZhOGUyMTM0YWZiMGMxZjU4ZjdmZiIsImlhdCI6MTYyNzgyNjcyOX0.aKtIzijjZZgMjgOShd7kxS_fzd-oNnvH5DilZOa0Tqo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/sendemail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sendemail"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

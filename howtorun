@@ -1,0 +1,4 @@
+1. npm install
+2. make sure mongodb is runnig at localhost
+3. uncomment line number 45, 46 from app.js
+4. npm start
